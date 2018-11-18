@@ -13,8 +13,6 @@ This layer is responsible for implementing actions for entities. [Actions](http:
 ## Authorize
 
 We provide some actions to authorize a user. The authorize actions include signup, login, logout and update password for a user.
-
-
 ----
 
 ```js
@@ -1256,7 +1254,6 @@ This action is responsible to clear user setting on reducer.
 
 ## voteActions
 We provide some actions to manipulate with vote. The vote actions includes add, get and delete vote.
-------
 
 ```js
 dbAddVote = (postId ,ownerPostUserId ) => {}
