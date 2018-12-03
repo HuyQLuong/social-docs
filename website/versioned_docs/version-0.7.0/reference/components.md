@@ -408,7 +408,7 @@ loadPhotos|function|| This function is to handle fetching the data by paging
 hasMorePhotos|boolean||This variable indicates if there is more photo {true} or not {false}
 images|list|| This list contains images from stream
 
-PhotoStreamComponent
+PostComponent
 ---
 Name    |Type               |Default                | Desciption
 --      |--                 |--                     |--
@@ -430,6 +430,271 @@ setHomeTitle|function|| This function is to handle changing title of top bar
 getPostComments|function|| This function is to handle fetching the comments of a post
 commentList|list|| This list contains all comments of a post
 
+PostImageUpload
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+uploadImage|function|| This function is to handle uploading image to server
+theme|any||This variable corresponds to the theme
+progress|object||This object corresponds to upload file progress state
+photo|object|| This object correspond to the selected image which has `src` contains image url and `filename` which represents iamge file name
+createAlbumRequestStatus|string|| This variable indicates the status of create album request from the server.
+onDelete |function|| This function is triggered when file is deleted
+currentUser|object|| This object contains current user information
+currentAlbum|object| This object contains information of current album
+
+
+PostWriteComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+open|boolean|| This variable indicates the state of post writing page. If it's true post writing page will be open
+
+onRequestClose|function|| This function is triggered to close request event
+style|object||This object contains post write style
+edit|boolean||This variable indicates post edit view state. If it's true, post will be in edit view
+text|string||This varaible correspdong to the text of post in editing state
+image|string|| This varaible conresspnds to the image of post in editing state
+id|string|| This variable correspond to post id. When post state is editing this id sould be filled with post identifier
+postImageState|boolean||This variable indicates post whther the post has image {true} or not {false}
+ownerAvatar||string|| This variable corresponds to user avatar address
+ownerDisplayName|string|| This variable correspdons to the post owner name
+postModel|object|| This object represent to the post model
+post|function|| This function is to handle saving the post
+update|function||This function is to handle updating the post
+openAlbum|function|| This function is to handle open the image
+closeAlbum|function|| This function is to handle close the album
+progress|object|| This object contains progress change information
+albumDialogOpen|boolean|| This variable indicates the state of album dialog whether album dialog is open {true}
+uploadImage|function|| This function is to handle uploaduing image
+
+ProfileAlbumComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+location|any|| This varaible corresponds to router
+uploadImage|function|| This function is to handle uploading the image in the album
+openAlbum|function|| This function is to handle open the album
+closeAlbum|fucntion|| This function is to handle close the album
+albumDialogOpen|boolean|| This variable indicates the state of album dialog Whether album dialog is open {true}
+isOwner|boolean|| This variable is to indicates Whether the current user is owner
+hasMoreAlbum|boolean|| This variable indicates whether has more album
+posts|list|| This list contains information of album posts
+progress|object||This object contains information of progress change
+userId|string|| This variable corresponds to the user identifier of current profile
+page|number|| This variable corresponds current page number
+increasePage|function|| This function is to handle increasing page number
+loadAlbums|function|| This function is to handle loading albums
+currentUser|object|| This object contains current user information
+
+ProfileHeaderComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+isAuthedUser|boolean|| This variable indicates whether the profile is current user {true} or not {false}
+banner|string|| This variable corresponds to image cover address
+fullname|string|| This variable corresponds to user's fullname
+tagLine|string|| This variable corresponds to user's tag line
+avatar|string|| This variable corresponds to user's avatar address
+openEditor|function|| This function is to handle opening edit profile dialog
+followerCount|number|| This variable indicate number of followers
+userId|string||This variable corresponds to current user identifier
+editProfileOpen|boolean|| This variable indicates the state of edit profile whether it is openned {true} or not {false}
+
+ReadMore
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+lines|number|3|This variable indicates number of lines will be show for each request of the user
+more|string|`Read more`|
+less|string|`Show less`|
+
+RecaptchaComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+onSuccess|function|| This function is trigger when captcha is sovled succesfully
+onExpired|function|| This function is trigger when captcha is expired
+onRenderError|fucntion|| This function is to handle captcha render error
+
+
+RecentChatComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+info|object|| This object cotains current user profile
+onRequestClose|function|| function|| This function is triggered to close request event
+open|boolean|| This variable indicates the state of user notification popover whether it is open {true} or not {false}
+anchorE1|any|| This variable is used to keep element
+followers|object|| This object contains information of user followers
+
+RecentChatItemComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+description|string|| This variable corresponds to notification description
+fullName|string|| This variable corresponds to user full name
+avatar|string|| This variable corresponds to user avatar
+isSeen|boolean|| This variable indicates whether notification has seen {true} or not {false}
+id|string|| This variable corresponds to notification identifier
+goTo|function|| This function is to handle redirecting to specific url
+closeRecentChat|function|| This function is to handle closing recent chat
+followerId|string||This variable correspond to followe identifier
+url|string||This variable corresponds to the url which notification mention
+seenRecentChat|function|| This function is to handle changing notification status to has seen
+setCurrentChat|fucntion|| This function is to handle setting current chat
+getChatOnce|function||This function is to handle get chat for once time only
+subscribeChat|function|| This function is to handle subscribing to chat
+
+SearchBoxComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+location|any|| This variable correspond to router location
+goto|function|| This function is to redirect to another url which will input to this url
+
+SendFeedbackComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+sendFeedbackStatus|boolean||This variable indicates whether send feedback is displayed {true} or not {false}
+sendFeed|fucntion||This function is to handle sending feedback
+hideFeedback|function||This funtion is to handle hiding feedback form
+sendFeedback|function|| This function is to handle sending request to server to send feedback
+currentUser|object|| This object contains current user information
+theme|any|| This variable corresponds to theme
+
+ShareDialogComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+shareOpen|boolean|| This variable indicates whether share dialog is open {true} or not {false}
+onClose|function|| This function is trigger when dialog is closed
+openCopyLink|boolean|| This variable indicates whether copy link dialog is open {true} or not {false}
+post|object|| This object contains post information
+
+SidebarComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+status|function||This function is to handle changing sidebar status
+overlay|function||This function is to handle changing sidebar overlay
+open|function|| This function is to handle opening sidebar callback function
+
+
+SidebarContentComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+status|function||This function is to handle changing sidebar status
+overlay|function||This function is to handle changing sidebar overlay
+classes     |any       |                       | Contain material UI style of html class
+cstyle|object|| This object contains sidebar content style
+
+
+SidebarMainComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+cstyle|object|| This object contains sidebar content style
+
+UserActivityComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes     |any       |                       | Contain material UI style of html class
+openEditor|function|| This function is to handle opening edit profile dialog
+isCurrentUser|boolean|| This variable indicates whether it is current user profile {true} or not {false}
+editProfileOpen|boolean|| This variable indicates whether edit profile is open {true} and not {false}
+profile|object|| This object contains user profile information
+
+
+UserAvatarComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+filename|string|| This variable is used to fetch url address from server
+fullname|string|| This variable corresponds to user fullname
+style|boject|| This object contains avatar style information
+theme|any|| This variable corresponds to theme
+size|number|| this variable corresponds to avatar size
+onClick|function|| This fucntion is triggered on touch tap
+classname|any|| Contain material UI style of html class
+
+
+UserBoxComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes|any|| Contain material UI style of html class
+userId|string|| This variable corresponds to user indentifier
+user|object|| This object contains user information
+avatar|string|| This variable corresponds to avatar address
+fullname|string|| This variable corresponds to user fullname
+goTo|function|| This function is to handle changing route location
+
+UserBoxListComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+users|list|| This list content all user information in the circle
+uid|string|| This variable corresponds to user identifier
+
+UserPermissionComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+open|boolean||This variable indicates whether add video modal is open {true} or close {false}
+onClose|function||This function is to handle closing add video moddal
+onAddAccessList|function|| This function is trigger when adding user access list
+followingIds|string||This variable corresponds to user following identifier
+currentUser|object|| This object contains current user information
+access|string|| This variable corresponds to default user permission type
+
+
+VideoGalleryComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+t|any||Translating to locale string
+classes|any|| Contain material UI style of html class
+set|function|| This function is to handle selecting video form video gallery
+getVideoGallery|fucntion|| This function is to handle getting video gallery
+deleteVideo|function|| This function is to handle delete a video
+uploadVideo|function|| This function is to handle uploading the video to the server
+close|fucntion|| This function is to handle close video gallery
+videos|list|| This list contains videos in gallery
+showError|function|| This function is to show error message if there is an error
+
+YourCirclesComponent
+---
+Name    |Type               |Default                | Desciption
+--      |--                 |--                     |--
+circles|object|| This object contains circles' information
+uid|string|| This variable corresponds to user identifier
+t|any||Translating to locale string
 
 
 
