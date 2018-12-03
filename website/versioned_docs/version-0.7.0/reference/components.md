@@ -48,7 +48,7 @@ theme|any||Theme
 progress| object ||The state of file progress 
 photos | object || Contain information of selected photo
 createAlbumRequestStatus|string|| Status of creating album request
-currentUser|object| Contain user information of current user
+currentUser|object|| Contain user information of current user
 currentAlbum|object||Contain current album post information 
 post|function||Responsible to create a post by post object
 t|function||Responsible translate to local string
@@ -87,9 +87,9 @@ openRecentChat|function||This function is to handle opening recent chat
 closeRecentChat|function||This function is to handle closing recent chat
 receiverUser|object|| A user object which contains the receiver information
 removeChatHistory|function||This function is to handle removing chat history
-setCurrentChat|function| This function is to handle set current chat
+setCurrentChat|function|| This function is to handle set current chat
 followers|object|| An object contains followers information
-chatMessages|object| An object of chat message model
+chatMessages|object|| An object of chat message model
 classes     |any       |                       | Contain material UI style of html class
 currentUser|object||An object contains current user information
 sendMessage|function|| This function is to handle sending message
@@ -103,7 +103,7 @@ Name    |Type               |Default                | Desciption
 t|function||Responsible translate to local string
 chatMessages|object||An object of chat message model
 classes     |any       |                       | Contain material UI style of html class
-currentUser|object| An object contains current user information
+currentUser|object|| An object contains current user information
 
 ChatMessage
 ---
@@ -112,11 +112,11 @@ Name    |Type               |Default                | Desciption
 t|function||Responsible translate to local string
 loading|boolean|| This variable is to indicate the loading state 
 classes     |any       |                       | Contain material UI style of html class
-currentUser|object| An object contains current user information
+currentUser|object|| An object contains current user information
 rtl|boolean|| This variable is to indicate chat message direction is right to left
-text|string|Corresponding to text message in chat
-avatar|string| Corresponding to message owner'savatar address
-ownerName|string| Corresponding to message owner's name
+text|string|| Corresponding to text message in chat
+avatar|string|| Corresponding to message owner'savatar address
+ownerName|string|| Corresponding to message owner's name
 
 ChatRoomSetting
 ---
@@ -127,10 +127,10 @@ classes     |any       |                       | Contain material UI style of ht
 open|boolean|| This variable is to indicate add video modal is open
 onClose|any||This function is to handle close add video modal
 leftSideClose|boolean||This variable is to indicate left side chat is close
-rightSideDisabled|boolean|This variable is to indicate right side chat is close
+rightSideDisabled|boolean||This variable is to indicate right side chat is close
 room|object||An object contains information of a chat room
-setLanguage|function| This function is to handle setting chat room language
-currentUser|object| An object contains current user information
+setLanguage|function|| This function is to handle setting chat room language
+currentUser|object|| An object contains current user information
 
 CircleComponent
 ---
@@ -139,12 +139,12 @@ Name    |Type               |Default                | Desciption
 t|function||Responsible translate to local string
 classes     |any       |                       | Contain material UI style of html class
 circle|object|| An object corresponding to circle
-id|string| This variable is correspoding to circle identifier
-uid|string|This variable is correspoding to user identifier
+id|string|| This variable is correspoding to circle identifier
+uid|string||This variable is correspoding to user identifier
 updateCircle|function||This function is to handle updating circle information
 deleteCircle|function||This function is to handle deleteing circle
-usersOfCircle|object||| A object contains the users of current circle
-closeCircleSettings|function| This function is to handle closing setting box of circle
+usersOfCircle|object|| A object contains the users of current circle
+closeCircleSettings|function|| This function is to handle closing setting box of circle
 openSetting|boolean|| This variable indicates circle setting dialog is open {true} or not {false}
 goTo|function|| This function is to handle changing route location
 openCircleSettings|function||This function is to handle opening setting box for a circle
@@ -169,7 +169,7 @@ avatar|string|| This variable corresponds to user avatar address
 disableComments|boolean|| This variable indicates writing comment on the post is disabled {true} or not {false} 
 editorStatus|boolean| This variable indicates whether comment edit is open {true} or not {false} 
 
-CommentGroupComponent
+CommentListComponent
 ---
 Name    |Type               |Default                | Desciption
 --      |--                 |--                     |--
@@ -196,7 +196,7 @@ Name    |Type               |Default                | Desciption
 t|function||Responsible translate to local string
 classes     |any       |                       | Contain material UI style of html class
 comments|object|| An object contains information of comments in a post
-commentsEditorStatus|object|This object indicate each comment editor status
+commentsEditorStatus|object||This object indicate each comment editor status
 isPostOwner|boolean|| This variable indicates current user is the post owner {true} or not {false}
 postId|string|| This variable indicates the post identifier comments belong to
 disableComments|boolean|| This variable indicates comment on the post is disabled {false} or not {true}
@@ -250,13 +250,13 @@ Name    |Type               |Default                | Desciption
 userId|string|| This variable corresponds to current user identifier
 user|object|| An object contains current user information
 circles|object|| An object contains circles' information of current user
-userBelongCircles|list| This list contains circles' id which current user belong to
+userBelongCircles|list|| This list contains circles' id which current user belong to
 isFollowed|boolean|| This variable indicates whether current user followed this user
 belongCirclesCount|number|| This variable corresponds to the number of circles which current user belong to
 firstBelongCircle|object|| An object of first circle which current user belong to
 avatar|string|| This variable corresponds to current user avatar address
 fullName|string|| This variable corresponds to current user fullname
-followingCircle|object| An object contains the following circle identifier of current user
+followingCircle|object|| An object contains the following circle identifier of current user
 createCircle|function|| This function is to handle creating a circle
 addUserToCircle|function|| This function is to handle adding user to a circle
 followUser|function|| This function is to handle adding referer user to the following circle of current user
@@ -264,7 +264,7 @@ deleteFollowingUser|function|| This function is to handle deleting following use
 setSelectedCircles|function|| This function is to handle setting current user selected circles for referer user
 removeSelectedCircles|function|| This function is to handle removing current user selected circles for referer user 
 openSelectCircles|function||  This function is to handle opening selected circle box
-closeSelectCirclesfunction||  This function is to handle closing selected circle box
+closeSelectCirclesfunction|function||  This function is to handle closing selected circle box
 goTo|function|| This function is to handle redirecting page to a specific url
 followRequest|string|| This variable indicates the status of following user server request
 addToCircleRequest|string|| This variable indicates the status of add to circle user server request
@@ -357,7 +357,6 @@ NotifyItemComponent
 ---
 Name    |Type               |Default                | Desciption
 --      |--                 |--                     |--
-
 classes     |any       |                       | Contain material UI style of html class
 description|string||This variable corresponds to notification description
 fullName| string||This variable corresponds to user's full name
@@ -443,7 +442,7 @@ photo|object|| This object correspond to the selected image which has `src` cont
 createAlbumRequestStatus|string|| This variable indicates the status of create album request from the server.
 onDelete |function|| This function is triggered when file is deleted
 currentUser|object|| This object contains current user information
-currentAlbum|object| This object contains information of current album
+currentAlbum|object|| This object contains information of current album
 
 
 PostWriteComponent
@@ -453,7 +452,6 @@ Name    |Type               |Default                | Desciption
 t|any||Translating to locale string
 classes     |any       |                       | Contain material UI style of html class
 open|boolean|| This variable indicates the state of post writing page. If it's true post writing page will be open
-
 onRequestClose|function|| This function is triggered to close request event
 style|object||This object contains post write style
 edit|boolean||This variable indicates post edit view state. If it's true, post will be in edit view
@@ -461,7 +459,7 @@ text|string||This varaible correspdong to the text of post in editing state
 image|string|| This varaible conresspnds to the image of post in editing state
 id|string|| This variable correspond to post id. When post state is editing this id sould be filled with post identifier
 postImageState|boolean||This variable indicates post whther the post has image {true} or not {false}
-ownerAvatar||string|| This variable corresponds to user avatar address
+ownerAvatar|string|| This variable corresponds to user avatar address
 ownerDisplayName|string|| This variable correspdons to the post owner name
 postModel|object|| This object represent to the post model
 post|function|| This function is to handle saving the post
@@ -510,12 +508,14 @@ userId|string||This variable corresponds to current user identifier
 editProfileOpen|boolean|| This variable indicates the state of edit profile whether it is openned {true} or not {false}
 
 ReadMore
+---
+Name    |Type               |Default                | Desciption
 --      |--                 |--                     |--
 t|any||Translating to locale string
 classes     |any       |                       | Contain material UI style of html class
 lines|number|3|This variable indicates number of lines will be show for each request of the user
-more|string|`Read more`|
-less|string|`Show less`|
+more|string|`Read more`||
+less|string|`Show less`||
 
 RecaptchaComponent
 ---
@@ -535,7 +535,7 @@ Name    |Type               |Default                | Desciption
 t|any||Translating to locale string
 classes     |any       |                       | Contain material UI style of html class
 info|object|| This object cotains current user profile
-onRequestClose|function|| function|| This function is triggered to close request event
+onRequestClose|function||This function is triggered to close request event
 open|boolean|| This variable indicates the state of user notification popover whether it is open {true} or not {false}
 anchorE1|any|| This variable is used to keep element
 followers|object|| This object contains information of user followers

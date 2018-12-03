@@ -10,10 +10,9 @@ This layer is responsible for implementing actions for entities. [Actions](http:
 
 ----
 
-## Authorize
-
-We provide some actions to authorize a user. The authorize actions include signup, login, logout and update password for a user.
+Authorize
 ----
+We provide some actions to authorize a user. The authorize actions include signup, login, logout and update password for a user.
 
 ```js
 dbLogin = (email , password) => {}
@@ -77,7 +76,7 @@ updatePassword = () => {}
 
 This action is responsible to fire reducer method on update password.
 
-## Circle
+---Circle
 
 We provide some actions to manipulate user circle. The circle actions include add circle, add user to a circle, update circle and user to circle, delete circle and user in circle, get circle and get follower.
 
@@ -242,7 +241,7 @@ hideFollowingUserLoading = (userId) => {}
 ```
 This action is responsible to hide loading on following user. `userId` is id of user
 
-## Comment
+---Comment
 We provide some actions to manipulate user comment. The comment actions include get comments, update comments, delete comments
 
 ---
@@ -314,7 +313,8 @@ closeCommentEditor = (comment) => {}
 This action is responsible to close comment editor of a comment. `comment` is an object with comment information.
 
 
-## globalActions
+GlobalActions
+---
 
 We provide some actions to manipulate some frequently used function. The global actions include send newFeed, showNotification
 
@@ -467,7 +467,8 @@ This action is responsible to open a dialog. `type` is an object of dialog type 
 ```
 This action is responsible to close a dialog. `type` is an object of dialog type information which will be closed
 
-## imageGalleryActions
+ImageGalleryActions
+---
 We provide some actions to manipulate images and videos in gallery. The imageGallery actions includes get, update delete images and videos.
 
 ```js
@@ -670,7 +671,8 @@ sendImageRequest = (name) => {}
 
 This action is responsible to send an image request on reducer. `name` is the name of the image request.
 
-## notifyActions
+NotifyActions
+---
 We provide some actions to manipulate with notification. The notify actions includes add, get, delete, seen notifications.
 
 ```js
@@ -729,7 +731,8 @@ This action is responsible to clear all the notification on reducer.
 
 
 
-## postActions
+PostActions
+---
 We provide some actions to manipulate with post. The post actions includes add, get, delete, search post/posts
 
 ```js
@@ -958,7 +961,8 @@ lastPostProfile = (userId, lastPostId) => {}
 This action is responsible to set the last post of profile posts. `userId` is id of user. `lastPostId` is the id of the last post.
 
 
-## userActions
+UserActions
+---
 We provide some actions to manipulate with user. The post actions includes add, get, delete, search post/posts
 
 ```js
@@ -1218,7 +1222,8 @@ decreasePostCountUser = (userId ) => {}
 This action is responsible to decrease user post count on reducer.
 `userId` is user id.
 
-## userSettingActions
+UserSettingActions
+---
 We provide some actions to manipulate with userSetting. The userSetting actions includes get, update and clear userSetting.
 
 ```js
@@ -1252,7 +1257,8 @@ clearAllUserSetting = () => {}
 
 This action is responsible to clear user setting on reducer.
 
-## voteActions
+VoteActions
+---
 We provide some actions to manipulate with vote. The vote actions includes add, get and delete vote.
 
 ```js

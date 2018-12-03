@@ -9,7 +9,8 @@ This layer is responsible to handle action and call request to server and reduce
 
 ---
 
-##Authorize
+Authorize
+---
 This saga is responsible to handle action to call authorize request to server and change state on reducer
 
 ---
@@ -19,8 +20,8 @@ onAuthStateChanged()
 ```
 This function is responsible to subscribe authorize state change.
 
-##Chat
-
+Chat
+---
 This saga is responsible to handle action which call chat request to server and and change state on reducer
 
 ---
@@ -50,8 +51,8 @@ dbRemoveRoomHistory(action: { type: ChatActionType, payload: any })
 ```
 This function is responsible to remove chat room message history from the server and on reducer.
 
-##Circles
-
+Circles
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to circle action
 
 ```js
@@ -69,8 +70,8 @@ dbFetchUserTieds(action: { type: CircleActionType, payload: any })
 ```
 This function is responsible to get user tieds from server and update to state on reducer.
 
-##Comment
-
+Comment
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to comment action
 
 ```js
@@ -78,8 +79,8 @@ watchFetchComments()
 ```
 This function is responsible to fetch comment from server and update to state on reducer.
 
-##Common
-
+Common
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to common action
 
 ```js
@@ -97,8 +98,8 @@ loadTwitterMedia(action: { type: GlobalActionType, payload: any })
 ```
 This function is responsible to get twitter data from server and update to state on reducer.
 
-##Gallery
-
+Gallery
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to gallery action
 
 ```js
@@ -166,8 +167,8 @@ watchDeleteVideo(action: { type: ImageGalleryActionType, payload: any })
 ```
 This function is responsible to watch delete video from gallery.
 
-##Locale
-
+Locale
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to locale action
 
 ---
@@ -178,8 +179,8 @@ initLocalization()
 This function is responsible to initialize localization.
 
 
-##Notification
-
+Notification
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to notification action
 
 ---
@@ -190,8 +191,8 @@ dbFetchNotification()
 This function is responsible to fetch notification from server and update state on reducer.
 
 
-##Post
-
+Post
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to post action
 
 ---
@@ -224,8 +225,8 @@ getPostSearchKey()
 This function is responsible to fetch search key from server and update related data to state on reducer.
 
 
-##User
-
+User
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to user action
 
 ---
@@ -250,9 +251,8 @@ dbFetchUserProfileById(action: { type: UserActionType, payload: any })
 ```
 This function is responsible to fetch user profile by id from server and update related data to state on reducer.
 
-##UserSetting
-
-
+UserSetting
+---
 This saga is responsible to handle action which call request to server and and change state on reducer related to user setting action
 
 ---
